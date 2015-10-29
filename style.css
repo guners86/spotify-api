@@ -3,7 +3,6 @@ body {
 }
 
 .content {
-	width: 450px;
 	background-color: white;
 	padding: 5px 5px 5px 5px;
 	border-radius: 5px;
@@ -13,35 +12,16 @@ body {
 	margin-top: 5px;
 }
 
-.wrap-trakcs {
+.row{
 	margin-top: 10px;
-	display: inline-block;
-	overflow: hidden;
 }
 
-.wrap-trakcs .wrap-image {
-	float: left;
-	width: 130px;
-	height: 130px;
-}
-
-.wrap-trakcs .wrap-description {
-	float: right;
-	margin-left: 10px;
-}
-
-.wrap-trakcs .wrap-description .title .spec-value {
+.row .col-sm-8 .title .spec-value {
   color: #666;
-  font-size: 18px;
-  width: 300px;
+  font-size: 16px;
 }
 
-.wrap-trakcs .wrap-description .title .spec-label {
+.row .col-sm-8 .title .spec-label {
   display: block;
   color: #999;
-}
-
-.wrap-trakcs .wrap-description .media audio {
-	display: block;
-	width: 300px;
 }
