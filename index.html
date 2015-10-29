@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Spotify Preview</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="content">
+						<h1>Spotify Preview</h1>
+						<input type="text" id="query" class="form-control" placeholder="Busca una canción o artista"/>
+						<div id="results"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script id="results-template" type="text/x-handlebars-template">		
+			{{#each tracks.items}}
+				<div class="wrap-trakcs">
+					<div class="wrap-image">
+						<img src="{{this.album.images.0.url}}" alt="{{this.name}}" class="img-thumbnail">
+					</div>
+					<div class="wrap-description">
+						<div class="title">
+							<span class="spec-value">{{this.name}}</span>
+							<span class="spec-label">{{this.artists.0.name}}</span>
+						</div>
+						<div class="media">
+							<audio controls>
+							  <source src="{{this.preview_url}}">
+							</audio>
+						</div>						
+					</div>
+				</div>				
+			{{/each}}
+		</script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+		<script src="app.js"></script>	
+	</body>
+</html>
