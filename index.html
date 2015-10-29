@@ -22,11 +22,11 @@
 		
 		<script id="results-template" type="text/x-handlebars-template">		
 			{{#each tracks.items}}
-				<div class="wrap-trakcs">
-					<div class="wrap-image">
+				<div class="row">
+					<div class="col-sm-4">
 						<img src="{{this.album.images.0.url}}" alt="{{this.name}}" class="img-thumbnail">
 					</div>
-					<div class="wrap-description">
+					<div class="col-sm-8">
 						<div class="title">
 							<span class="spec-value">{{this.name}}</span>
 							<span class="spec-label">{{this.artists.0.name}}</span>
